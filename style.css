@@ -7,10 +7,15 @@
 
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Halesworth", Arial, Helvetica, sans-serif;
   color: #333;
   display: flex;
   justify-content: center;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
 }
 
 .page-wrapper {
@@ -25,14 +30,15 @@ body {
 }
 
 .site-title {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 /* chat window */
 .chatbox {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .chat-window {
@@ -44,47 +50,61 @@ body {
   overflow-y: auto;
   background: #fafafa;
   white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 /* messages */
 .msg {
-  margin-bottom: 14px;
   line-height: 1.5;
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 80%;
+  width: fit-content;
 }
 
 .msg.user {
+  align-self: flex-end;
+  background: #e3a535;
   color: #000;
 }
 
 .msg.ai {
+  align-self: flex-start;
+  background: #ffffff;
   color: #666666;
 }
 
 /* input row */
 .chat-form {
   display: flex;
-  gap: 12px;
-  margin-top: 16px;
+  gap: 0;
+  margin-top: 40px;
 }
 
 .chat-form input {
   flex: 1;
-  padding: 12px;
-  border: 1px solid #ccc;
+  height: 48px;
+  padding: 0 12px;
+  border: 1px solid #000000;
+  font-family: "Helvetica", Arial, sans-serif;
+  border-right: none;
   font-size: 18px;
 }
 
 .chat-form input:focus {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+  outline: 2px solid #e3a535;
+  outline-offset: 1px;
 }
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  background: #e3a535;
   color: #fff;
-  border: none;
-  padding: 12px;
+  border: 1px solid #000;
+  margin-left: -1px;
+  padding: 0;
   width: 48px;
   height: 48px;
   display: flex;
